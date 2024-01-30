@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer {
+  @font-face {
+    font-family: "Aeonik";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./fonts/Aeonik/AeonikTRIAL-Light.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Aeonik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/Aeonik/AeonikTRIAL-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Aeonik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/Aeonik/AeonikTRIAL-Bold.woff") format("woff");
+  }
+}
+#hero h1,
+#small h2 {
+  background: linear-gradient(
+    102deg,
+    rgba(109, 156, 246, 0.7) -11.46%,
+    #fff 46.19%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-bg {
+  background: linear-gradient(
+    269deg,
+    rgba(24, 38, 74, 0.8) 22.75%,
+    rgba(15, 22, 49, 0.8) 93.35%
+  );
+}
+.form-text {
+  opacity: 0.8;
+  background: linear-gradient(
+    90deg,
+    #c8d6f2,
+    #adc2ec 32.41%,
+    #9eb7e8 71.97%,
+    #97b1e6
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section {
+  padding: 80px 0px;
+}
+.about-card {
+  border-radius: 9.25px;
+  background: linear-gradient(
+    180deg,
+    rgba(40, 74, 144, 0.35) 0%,
+    rgba(40, 74, 144, 0.14) 100%
+  );
+  box-shadow: 0px 0px 8.672px 0px #749ff6;
+}
+
+.service-card {
+  border-radius: 16px;
+  /* border: 1px solid #749ff6; */
+  background: linear-gradient(
+    180deg,
+    rgba(33, 66, 136, 0.25) 0%,
+    rgba(8, 20, 43, 0.25) 100%
+  );
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(24px);
+}
+.ellipse-service {
+  border-radius: 1220px;
+  background: rgba(20, 28, 72, 0.6);
+  filter: blur(150px);
+  width: 1220px;
+  height: 396px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-ellipse {
+  border-radius: 800px;
+  background: rgba(20, 28, 72, 0.6);
+  filter: blur(200px);
+  position: absolute;
+  width: 800px;
+  height: 800px;
+}
+.small-circle__ellipse {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  background: rgba(20, 28, 72, 0.3);
+  filter: blur(50px);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 40px;
+  }
+}
