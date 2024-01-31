@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { svgVariants } from "../variants";
-const HeroBg = ({ className }) => {
+const HeroBg = () => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      // width="656"
-      // height="487"
-      className={`${className}`}
+      width="656"
+      height="487"
       fill="none"
     >
       <g filter="url(#a)">

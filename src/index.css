@@ -69,7 +69,6 @@ section {
 
 .service-card {
   border-radius: 16px;
-  /* border: 1px solid #749ff6; */
   background: linear-gradient(
     180deg,
     rgba(33, 66, 136, 0.25) 0%,
@@ -113,4 +112,7 @@ section {
   .container {
     padding: 0 40px;
   }
+}
+h2 {
+  color: #243bb980;
 }

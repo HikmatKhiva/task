@@ -1,19 +1,33 @@
 import { useState } from "react";
+import { Error, Success } from "../motion";
+const REGEX_EMAIL =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const FormEmail = () => {
-  const [error, setError] = useState("");
+  const [validEmail, setValidEmail] = useState("");
   const [email, setEmail] = useState("");
-  const handleSubmitForm = (event) => {
+  // typically i use tanstack query all off state already created this library but i didn't install this library because here haven't any fetch
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  // handle input change
+  const handleChangeInput = (event) => setEmail(event.target.value);
+  // handle submit form
+  const handleSubmitForm = async (event) => {
     event.preventDefault();
     try {
-      if (!email.length) {
-        return setError("Email is a required field");
-      } else if (/^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/.test(email)) {
-        setError("Please enter a valid email");
-      } else {
+      console.log(!REGEX_EMAIL.test(email));
+      if (!email.length) return setValidEmail("Email is a required field");
+      if (!REGEX_EMAIL.test(email)) {
+        return setValidEmail("Please enter a valid email");
       }
-    } catch (error) {}
+      setLoading(true);
+      setValidEmail("");
+      await new Promise(() => setTimeout(() => setLoading(false), 3000));
+      setIsSuccess(true);
+    } catch (err) {
+      setError(err);
+    }
   };
-  const handleChangeInput = (event) => setEmail(event.target.value);
   return (
     <form className=" max-w-[466px] pt-9" onSubmit={handleSubmitForm}>
       <div className="flex justify-between items-center form-bg p-[6px] rounded-3xl  overflow-hidden mb-3">
@@ -21,6 +35,7 @@ const FormEmail = () => {
           <input
             type="text"
             id="email"
+            autoComplete="email"
             value={email}
             onChange={handleChangeInput}
             name="email"
@@ -28,20 +43,32 @@ const FormEmail = () => {
             placeholder="Your business email..."
           />
         </label>
-        <button className="flex font-intern px-9 py-2 justify-center rounded-3xl font-bold text-white bg-primary-blue ">
-          Free trial
+
+        <button
+          disabled={loading}
+          type="submit"
+          className={`flex font-intern px-2 py-2 justify-center rounded-full font-bold text-white  ${
+            isSuccess || error ? "" : "bg-primary-blue"
+          } `}
+        >
+          {loading ? (
+            <span className="w-7 h-7 animate-spin border-4 border-grey-200  rounded-full border-t-white"></span>
+          ) : isSuccess && !loading ? (
+            <Success />
+          ) : error ? (
+            <Error />
+          ) : (
+            <span className="px-5">Free trial</span>
+          )}
         </button>
       </div>
-      {/* {error && ( */}
       <span
         className={`font-intern inline-block origin-top transition-all duration-300 text-error font-medium pl-5 ${
-          error ? "scale-y-100" : "scale-y-0"
+          validEmail ? "scale-y-100" : "scale-y-0"
         }`}
       >
-        {/* {error ? error : "Email is a required field"} */}
-        {error}
+        {validEmail}
       </span>
-      {/* )} */}
     </form>
   );
 };

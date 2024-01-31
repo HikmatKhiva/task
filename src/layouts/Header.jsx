@@ -1,7 +1,5 @@
-import { logo } from "../assets";
 import { navLinks } from "../config";
 import { Logo } from "../motion";
-import { motion } from "framer-motion";
 const Header = () => {
   return (
     <header className="py-4">
@@ -28,7 +26,7 @@ const Header = () => {
           </nav>
           {/* I didn't know this Link or Button  */}
           <button
-            className="font-semibold font-intern text-white md:py-4 md:px-9 rounded-[40px] bg-button-color border border-primary-blue"
+            className="font-semibold font-intern text-white md:py-4 md:px-9 rounded-[40px] hover:bg-secondary-blue-hover bg-button-color border border-primary-blue transition-all duration-300"
             type="button"
           >
             Get started

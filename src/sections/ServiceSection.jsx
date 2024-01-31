@@ -1,7 +1,5 @@
-import React from "react";
 import { service } from "../config";
 import ServiceCard from "../components/ServiceCard";
-
 const ServiceSection = () => {
   return (
     <section>

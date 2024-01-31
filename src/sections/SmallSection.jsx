@@ -1,5 +1,3 @@
-import React from "react";
-
 const SmallSection = () => {
   return (
     <section id="small" className="relative overflow-hidden">
@@ -20,7 +18,7 @@ const SmallSection = () => {
             Contact us
           </button>
           <button
-            className="py-4 px-9 bg-button-color border border-primary-blue rounded-[40px] font-medium text-white"
+            className="py-4 px-9 bg-button-color hover:bg-secondary-blue-hover transition-all duration-300 border border-primary-blue rounded-[40px] font-medium text-white"
             type="button"
           >
             Try for free

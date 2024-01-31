@@ -14,7 +14,7 @@ export default {
         "grey-100": "#EFF1F6",
         "primary-blue": "#243BB9",
         "secondary-blue": "#3F57DA",
-        // "button-hover-color": "#3F57DA",
+        "secondary-blue-hover": "#243bb980",
         error: "#F04242",
       },
       screens: {
