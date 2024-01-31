@@ -22,8 +22,10 @@ const FormEmail = () => {
       }
       setLoading(true);
       setValidEmail("");
-      await new Promise(() => setTimeout(() => setLoading(false), 3000));
-      setIsSuccess(true);
+      await new Promise(() => {
+        setTimeout(() => setLoading(false), 3000);
+        setIsSuccess(true);
+      });
     } catch (err) {
       setError(err);
     }
@@ -36,6 +38,7 @@ const FormEmail = () => {
             type="text"
             id="email"
             autoComplete="email"
+            readOnly={loading || isSuccess}
             value={email}
             onChange={handleChangeInput}
             name="email"
@@ -45,9 +48,9 @@ const FormEmail = () => {
         </label>
 
         <button
-          disabled={loading}
+          disabled={loading || isSuccess}
           type="submit"
-          className={`flex font-intern px-2 py-2 justify-center rounded-full font-bold text-white  ${
+          className={`flex font-intern px-2 py-2 justify-center rounded-full disabled:cursor-not-allowed font-bold text-white  ${
             isSuccess || error ? "" : "bg-primary-blue"
           } `}
         >
