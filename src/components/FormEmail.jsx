@@ -31,48 +31,53 @@ const FormEmail = () => {
     }
   };
   return (
-    <form className=" max-w-[466px] pt-9" onSubmit={handleSubmitForm}>
-      <div className="flex justify-between items-center form-bg p-[6px] rounded-3xl  overflow-hidden mb-3">
-        <label htmlFor="email" className="flex flex-grow bg-transparent">
-          <input
-            type="text"
-            id="email"
-            autoComplete="email"
-            readOnly={loading || isSuccess}
-            value={email}
-            onChange={handleChangeInput}
-            name="email"
-            className="bg-transparent pl-4 flex-grow outline-none form-text "
-            placeholder="Your business email..."
-          />
-        </label>
-
-        <button
-          disabled={loading || isSuccess}
-          type="submit"
-          className={`flex font-intern px-2 py-2 justify-center rounded-full disabled:cursor-not-allowed font-bold text-white  ${
-            isSuccess || error ? "" : "bg-primary-blue"
-          } `}
+    <div className="">
+      <div className="form-border p-px max-h-14 max-w-[466px] overflow-hidden">
+        <form
+          className="form-bg flex items-center justify-between max-h-[54px] overflow-hidden"
+          onSubmit={handleSubmitForm}
         >
-          {loading ? (
-            <span className="w-7 h-7 animate-spin border-4 border-grey-200  rounded-full border-t-white"></span>
-          ) : isSuccess && !loading ? (
-            <Success />
-          ) : error ? (
-            <Error />
-          ) : (
-            <span className="px-5">Free trial</span>
-          )}
-        </button>
+          <label htmlFor="email" className="flex flex-grow bg-transparent">
+            <input
+              className="outline-none form-text flex flex-1 text-[15px] bg-transparent pl-[23px] py-[18px] font-light leading-5 -tracking-[.01em]"
+              placeholder="Your business email..."
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="email"
+              readOnly={loading || isSuccess}
+              value={email}
+              onChange={handleChangeInput}
+            />
+          </label>
+          <div className="py-1.5 pe-1 overflow-hidden rounded-large min-w-[147px]">
+            <button
+              className={`flex items-center text-white rounded-[40px] justify-center leading-4 text-base font-semibold px-9 md:px-4 whitespace-nowrap duration-200 transition-colors h-11 bg-primary-blue border border-transparent hover:bg-secondary-blue  w-full ${
+                isSuccess || error ? "" : "bg-primary-blue"
+              }`}
+              type="submit"
+            >
+              {loading ? (
+                <span className="w-7 h-7 animate-spin border-4 border-grey-200  rounded-full border-t-white"></span>
+              ) : isSuccess && !loading ? (
+                <Success />
+              ) : error ? (
+                <Error />
+              ) : (
+                <span className="px-5">Free trial</span>
+              )}
+            </button>
+          </div>
+        </form>
       </div>
-      <span
-        className={`font-intern inline-block origin-top transition-all duration-300 text-error font-medium pl-5 ${
+      <p
+        className={`font-intern  origin-top transition-all duration-300 text-error font-medium pl-5 ${
           validEmail ? "scale-y-100" : "scale-y-0"
         }`}
       >
         {validEmail}
-      </span>
-    </form>
+      </p>
+    </div>
   );
 };
 export default FormEmail;

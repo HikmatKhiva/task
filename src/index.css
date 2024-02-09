@@ -22,6 +22,15 @@
     src: url("./fonts/Aeonik/AeonikTRIAL-Bold.woff") format("woff");
   }
 }
+::-webkit-scrollbar {
+  appearance: none;
+  display: none;
+  @apply bg-dark-blue;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary-blue rounded-lg hover:bg-secondary-blue-hover;
+}
+
 #hero h1,
 #small h2 {
   background: linear-gradient(
@@ -40,6 +49,10 @@
     rgba(24, 38, 74, 0.8) 22.75%,
     rgba(15, 22, 49, 0.8) 93.35%
   );
+}
+.form-border {
+  background: linear-gradient(90deg, #1b244f, #273871, #2c427f);
+  border-radius: 40px;
 }
 .form-text {
   opacity: 0.8;
@@ -112,7 +125,4 @@ section {
   .container {
     padding: 0 40px;
   }
-}
-h2 {
-  color: #243bb980;
 }

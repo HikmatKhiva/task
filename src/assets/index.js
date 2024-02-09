@@ -9,6 +9,7 @@ export { default as john } from "./images/john.png";
 // svg
 export { default as logo } from "./svg/liquid-abstract.svg";
 export { default as heroBg } from "./svg/hero-bg.svg";
+export { default as heroBgImage } from "./svg/heroBg.svg";
 export { default as cpu } from "./svg/cpu.svg";
 export { default as progress } from "./svg/progess.svg";
 export { default as reload } from "./svg/reload 2.svg";
