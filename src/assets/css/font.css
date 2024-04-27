@@ -1,0 +1,30 @@
+
+@font-face {
+  font-family: Aeonik;
+  font-style: normal;
+  src: url("../fonts/fonnts.com-Aeonik_Light.ttf") format("ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Aeonik;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/fonnts.com-Aeonik_Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Aeonik;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/fonnts.com-Aeonik_Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: Aeonik;
+  font-style: normal;
+  src: url("../fonts/fonnts.com-Aeonik_Black.ttf") format("ttf");
+}
+@font-face {
+  font-family: Aeonik;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fonnts.com-Aeonik_Black.ttf") format("ttf");
+}

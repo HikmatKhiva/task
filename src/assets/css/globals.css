@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("./font.css");
+
+.container {
+  width: 1472px;
+}
+
+.hero-round-gradient {
+  position: absolute;
+  top: -400px;
+  left: -400px;
+  height: 800px;
+  width: 800px;
+  background-color: rgb(20, 28, 72, 0.6);
+  border-radius: 800px;
+  filter: blur(200px);
+}
+.hero-title {
+  background: linear-gradient(
+    102.21deg,
+    rgba(109, 156, 246, 0.7) -11.46%,
+    #ffffff 46.19%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-bg {
+  background-size: 1799px 760px;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+}
+.form-border {
+  background: linear-gradient(90deg, #1b244f, #273871, #2c427f);
+}
+.form-email {
+  background: linear-gradient(
+    269deg,
+    rgba(24, 38, 74, 0.8) 22.75%,
+    rgba(15, 22, 49, 0.8) 93.35%
+  );
+}
+.solution-card {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 66, 136, 0.25) 0%,
+    rgba(8, 20, 43, 0.25) 100%
+  );
+  border: 1px solid;
+  border-radius: 10px;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(116, 159, 246, 0.3) 0%,
+    rgba(21, 57, 132, 0.3) 100%
+  );
+  box-shadow: 0px 10px 40px 0px #0000004d;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}

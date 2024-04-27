@@ -1,0 +1,15 @@
+export { default as logo } from "./images/logo.svg";
+export { default as hero } from "./images/hero.svg";
+export { default as heroIllustrator } from "./images/hero-illustration-bg.svg";
+export { default as heroBg } from "./images/hero-bg.svg";
+export { default as frame } from "./images/frame.svg";
+export { default as efficient } from "./images/efficient.png";
+export { default as cpu } from "./images/cpu.png";
+export { default as server } from "./images/server.png";
+export { default as automatic } from "./images/automatic.png";
+export { default as CI } from "./images/CI.svg";
+export { default as bgTestimonial } from "./images/testimonialbg.png";
+export { default as testimonial1 } from "./images/testimonial1.png";
+export { default as testimonial2 } from "./images/testimonial2.png";
+export { default as john } from "./images/john.png";
+export { default as jane } from "./images/jane.png";
