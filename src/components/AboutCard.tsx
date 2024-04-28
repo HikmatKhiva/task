@@ -14,8 +14,8 @@ const AboutCard = ({ about }: { about: IAboutCard }) => {
         />
       </div>
       <figcaption className="mt-[14px]">
-        <h3 className="text-xl leading-tight text-white mb-2">{about.title}</h3>
-        <p className="text-base text-grey-200">{about.description}</p>
+        <h3 className="text-xl font-Inter font-medium leading-tight text-white mb-2">{about.title}</h3>
+        <p className="text-base text-grey-200 font-Inter font-light">{about.description}</p>
       </figcaption>
     </figure>
   );

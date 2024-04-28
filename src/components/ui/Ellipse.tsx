@@ -8,7 +8,7 @@ const Ellipse = React.forwardRef<HTMLDivElement, EllipseProps>(
         {...props}
         ref={ref}
         className={cn(
-          `${className} absolute z-10 bg-[#141c4899] blur-[200px] `
+          `${className} absolute z-10 bg-[#141c4899] blur-[200px] rounded-[800px]`
         )}
       />
     );

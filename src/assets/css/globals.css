@@ -1,27 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("./font.css");
-
+@import url("font.css");
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0a0812;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #243ab95d;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #243ab983;
+}
 .container {
   width: 1472px;
 }
-
-.hero-round-gradient {
-  position: absolute;
-  top: -400px;
-  left: -400px;
-  height: 800px;
-  width: 800px;
-  background-color: rgb(20, 28, 72, 0.6);
-  border-radius: 800px;
-  filter: blur(200px);
-}
 .hero-title {
   background: linear-gradient(
-    102.21deg,
-    rgba(109, 156, 246, 0.7) -11.46%,
-    #ffffff 46.19%
+    90deg,
+    rgba(109, 156, 246, 0.7) -8.51%,
+    rgba(195, 214, 251, 0.876516) 10.33%,
+    #ffffff 51.91%,
+    rgba(208, 223, 252, 0.90333) 87.66%,
+    rgba(109, 156, 246, 0.7) 109.79%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -60,12 +63,5 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }

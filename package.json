@@ -1,7 +1,19 @@
 {
   "name": "task",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "email": "xikmatkhiva.4s@gmail.com",
+    "name": "Hikmatbek Bekturdiyev",
+    "url": "https://hikmatbek.uz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HikmatKhiva/task.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Siroj910/kivo/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,10 +24,12 @@
     "@hookform/resolvers": "^3.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.376.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
+    "sharp": "^0.33.3",
     "tailwind-merge": "^2.3.0",
     "zod": "^3.23.4"
   },

@@ -20,11 +20,28 @@ interface IAboutCard {
 interface IUser {
   name: string;
   profession: string;
-  avatar: ICustomImage;
+  avatar: ICustomImage | any;
 }
 interface ITestimonial {
   id: number;
   description: string;
-  icon: ICustomImage;
+  icon: ICustomImage | any;
   user: IUser;
+}
+interface ISolution {
+  id: number;
+  image: ICustomImage | any;
+  title: string;
+  description: string;
+}
+interface ILinks {
+  id: number;
+  title: string;
+  path: string;
+  icon?: ICustomImage | any;
+}
+interface IFooterLink {
+  id: number;
+  title: string;
+  links: ILinks[];
 }
