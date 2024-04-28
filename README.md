@@ -24,10 +24,11 @@
 
 - Semantic HTML5 markup
 - CSS Tailwindcss
-- Flexbox
+- Flexbox & Grid
 - Javascript
-- React
-- framer-motion
+- nextJs
+- react-hook-form
+- zod 
 
 ## Author
 

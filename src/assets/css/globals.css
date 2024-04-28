@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("font.css");
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0a0812;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #243ab95d;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #243ab983;
+}
+.container {
+  width: 1472px;
+}
+.hero-title {
+  background: linear-gradient(
+    90deg,
+    rgba(109, 156, 246, 0.7) -8.51%,
+    rgba(195, 214, 251, 0.876516) 10.33%,
+    #ffffff 51.91%,
+    rgba(208, 223, 252, 0.90333) 87.66%,
+    rgba(109, 156, 246, 0.7) 109.79%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-bg {
+  background-size: 1799px 760px;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+}
+.form-border {
+  background: linear-gradient(90deg, #1b244f, #273871, #2c427f);
+}
+.form-email {
+  background: linear-gradient(
+    269deg,
+    rgba(24, 38, 74, 0.8) 22.75%,
+    rgba(15, 22, 49, 0.8) 93.35%
+  );
+}
+.solution-card {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 66, 136, 0.25) 0%,
+    rgba(8, 20, 43, 0.25) 100%
+  );
+  border: 1px solid;
+  border-radius: 10px;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(116, 159, 246, 0.3) 0%,
+    rgba(21, 57, 132, 0.3) 100%
+  );
+  box-shadow: 0px 10px 40px 0px #0000004d;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
