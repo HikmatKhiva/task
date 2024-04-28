@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 const AboutCard = ({ about }: { about: IAboutCard }) => {
   return (
@@ -8,7 +7,6 @@ const AboutCard = ({ about }: { about: IAboutCard }) => {
           width={about.image.width}
           height={about.image.height}
           className="absolute  -left-3"
-          //   blurDataURL={about.image.blurDataURL}
           src={about.image.src}
           alt="test"
         />
@@ -20,5 +18,4 @@ const AboutCard = ({ about }: { about: IAboutCard }) => {
     </figure>
   );
 };
-
 export default AboutCard;

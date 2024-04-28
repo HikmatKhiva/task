@@ -6,14 +6,14 @@ import Link from "next/link";
 import React from "react";
 const Footer = () => {
   return (
-    <footer className="2xl:block hidden">
+    <footer className="2xl:block hidden max-h-[296px]">
       {/* Footer Top */}
-      <div className="relative ">
-        <Ellipse className="w-[300px] h-[300px] bg-[#141C4899] -left-[150px] rounded-[300px] -top-[100px]  " />
-        <Ellipse className="w-[200px] h-[200px] bg-[#141C4899] -right-[0px] rounded-[300px] -top-[100px] " />
+      <div className="relative z-10">
+        <Ellipse className="w-[600px] h-[600px] bg-[#141C4899] left-[0px] rounded-[800px] -top-[300px] blur-[300px] -translate-x-[300px] " />
+        <Ellipse className="w-[600px] h-[600px] bg-[#141C4899] right-[0px] rounded-[600px] -top-[300px] blur-[300px] translate-x-[300px] " />
       </div>
       {/* Footer Bottom */}
-      <div className="border-t border-[#172136] mt-40 pt-12 pb-[51px] relative z-20 bg-black">
+      <div className="border-t border-[#172136] mt-40 pt-12 pb-[51px] relative z-20 bg-primary-black">
         <div className="container ">
           <div className="flex flex-wrap gap-y-10 justify-between items-start">
             <Link href={"/"}>
@@ -56,7 +56,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <p className="text-grey-200 text-sm font-Inter font-light leading-normal">
+          <p className="text-grey-200 text-sm font-Inter font-light inline-block leading-normal">
             Devoptima 2024 © All rights reserved
           </p>
         </div>

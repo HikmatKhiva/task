@@ -17,5 +17,4 @@ const AlertSection = () => {
     </section>
   );
 };
-
 export default AlertSection;

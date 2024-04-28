@@ -18,7 +18,7 @@ const Header = () => {
             alt="DevOptima header logo"
           />
         </Link>
-        <ul className="flex items-center gap-x-12">
+        <ul className="flex items-center gap-x-12 absolute bg-transparent left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <li key={link.id} className="hover:font-medium transition-all duration-300 font-normal">
               <Link

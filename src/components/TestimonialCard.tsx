@@ -1,18 +1,17 @@
 import Image from "next/image";
-import React from "react";
 const TestimonialCard = ({ testimonial }: { testimonial: ITestimonial }) => {
   return (
-    <figure className="w-[522px] h-[304px] ">
+    <figure className="w-[522px] h-[304px]">
       <Image
         src={testimonial.icon.src}
-        width={64}
-        height={64}
+        width={70}
+        height={70}
         className="rounded-3xl"
         alt={testimonial.user.profession}
       />
-      <figcaption>
+      <figcaption className="mt-3 ">
         <p
-          className="text-grey-200 text-2xl leading-9  mt-5 font-Inter"
+          className="text-grey-200 text-2xl leading-9 font-light  font-Inter"
           dangerouslySetInnerHTML={{ __html: testimonial.description }}
         />
         <div className="flex items-center gap-3 mt-8">

@@ -8,12 +8,11 @@ const Ellipse = React.forwardRef<HTMLDivElement, EllipseProps>(
         {...props}
         ref={ref}
         className={cn(
-          `${className} absolute z-10 bg-[#141c4899] blur-[200px] rounded-[800px]`
+          `absolute z-10 bg-[#141c4899] ${className} `
         )}
       />
     );
   }
 );
 Ellipse.displayName = "Ellipse";
-
 export default Ellipse;

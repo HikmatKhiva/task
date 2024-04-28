@@ -3,7 +3,6 @@ import "../assets/css/globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 import { favicon } from "@/constant";
-
 export const metadata: Metadata = {
   title: "DevOptima",
   description: "DevOptima",
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
     other: favicon,
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-primary-black">
+      <body className="bg-primary-black overflow-x-hidden">
         <Header />
         {children}
         <Footer />
